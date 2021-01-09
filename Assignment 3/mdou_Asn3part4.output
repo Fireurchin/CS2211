@@ -1,0 +1,76 @@
+Script started on 2020-02-29 01:30:18-05:00 [TERM="xterm" TTY="/dev/pts/9" COLUMNS="189" LINES="50"]
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ date
+Sat 29 Feb 2020 01:30:22 AM EST
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ whoami
+mdou
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ ls
+asn3b.c  asn3c.c  main.c  mdou_Asn3part4.output
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ gcc main.c -0[Ko asn2[K3a
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ gcc main.c -o asn3a[Kb[1P[1P[1P[1P[1@a[1@s[1@n[1@3[1@b
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ gcc asn3b.c -o asn3b[Kc[1P[1@c
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ ./asn2[K1[K3a
+Size of array: 60 bytes
+Length of array: 15 elements
+
+PROJECT 1:
+The Values Stored in the Array are:
+23 43 65 23 12 7 34 76 28 64 4 51 10 2 73 
+
+PROJECT 2:
+The Reverse Values are:
+73 2 10 51 4 64 28 76 34 7 12 23 65 43 23 
+
+PROJECT 3:
+The Smallest Value is:
+2 and is found at the 14th position from the left
+
+PROJECT 4:
+The Sum of the Array is:
+23 + 43 + 65 + 23 + 12 + 7 + 34 + 76 + 28 + 64 + 4 + 51 + 10 + 2 + 73 Equals: 515
+
+PROJECT 5:
+Copy the Original Array into a New Reversed Array:
+Orginal Array:
+23 43 65 23 12 7 34 76 28 64 4 51 10 2 73 
+New (Reversed) Array:
+73 2 10 51 4 64 28 76 34 7 12 23 65 43 23 
+
+PROJECT 6:
+Switch the First and Last Values of the Array:
+Original Array:
+23 43 65 23 12 7 34 76 28 64 4 51 10 2 73 
+Changed Array:
+73 43 65 23 12 7 34 76 28 64 4 51 10 2 23 
+
+PROJECT 7:
+Sort the Array in Ascending Order:
+Original Array:
+23 43 65 23 12 7 34 76 28 64 4 51 10 2 73 
+Changed Array:
+2 4 7 10 12 23 23 28 34 43 51 64 65 73 76 
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ ./asn3a[Kb
+Input? 23
+The Final Total is: 100
+Input? 5
+The Final Total is: 10
+Input? 1
+The Final Total is: 0
+Input? 0 17
+The Final Total is: 58
+Input? 21 9
+The Final Total is: 129
+Input? 0
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ vi[K[K/[K./asn3c
+14
+14
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ mc a[K[K[Kv main.c mdou_asn3a.c
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ ls
+[0m[01;32masn3a[0m  [01;32masn3b[0m  asn3b.c  [01;32masn3c[0m  asn3c.c  mdou_asn3a.c  mdou_Asn3part4.output
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ lsmv main.c mdou_asn3a.c[1P.cb.c[1P[1P[1P[1P[1@a[1@n[1P[1@s[1@n[1@2[1P[1@3[1@b
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ mv asn3b.c mdou_asn3b.c[1P.cc.c[1P[1@c
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ ls
+[0m[01;32masn3a[0m  [01;32masn3b[0m  [01;32masn3c[0m  mdou_asn3a.c  mdou_asn3b.c  mdou_asn3c.c  mdou_Asn3part4.output
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_3[mdou@compute Assignment_3]$ exit
+exit
+
+Script done on 2020-02-29 01:34:57-05:00 [COMMAND_EXIT_CODE="0"]

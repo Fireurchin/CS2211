@@ -1,0 +1,85 @@
+Script started on 2020-03-16 16:45:22-04:00 [TERM="xterm" TTY="/dev/pts/14" COLUMNS="80" LINES="24"]
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4[mdou@compute Assignment_4]$ who[K[K[Kdate
+Mon 16 Mar 2020 04:45:55 PM EDT
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4[mdou@compute Assignment_4]$ whoami
+mdou
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4[mdou@compute Assignment_4]$ ls
+mdou_Asn4P3.output  [0m[01;34mproject_1[0m  [01;34mproject_2[0m
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4[mdou@compute Assignment_4]$ cd p[Kproject_1
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_1[mdou@compute project_1]$ make f-[K[K-f mdou_c[2Pcd project_1ls[Kwhoami[2Pdatevi mdou_make_Proj2[2P./mdou_Asn4Proj2ls[Kmake -f  mdou_make_Proj2[K1
+make: 'mdou_Asn4Proj1' is up to date.
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_1[mdou@compute project_1]$ ls
+Asn4.txt                mdou_countLines.c  mdou_headers_P1.h
+[0m[01;32mmdou_Asn4Proj1[0m          mdou_countLines.o  mdou_main_P1.c
+mdou_countCharacters.c  mdou_countWords.c  mdou_main_P1.o
+mdou_countCharacters.o  mdou_countWords.o  mdou_make_Proj1
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_1[mdou@compute project_1]$ [K[mdou@compute project_1]$ vi mdou_Mai[K[K[Kmain+[K_P1.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;50r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[50;1H"mdou_main_P1.c" 40L, 1332C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m/* CS2211b [m[31m2020[m[34m */
+/* Assignment [m[35m0[m[31m4[m[34m */
+/* Mingpei Dou */
+/* [m[31m251056543[m[34m */
+/* mdou */
+/* [m[31m16[m[34m/Mar/[m[31m20[m[34m */[m
+
+[35m#include[m[31m<stdio.h>[m[7C[34m// imports neccessary functions to allow program to run as expected[m
+[35m#include[m[31m<string.h>[m      [34m// supports the usage of strings within the program[m
+[35m#include[m[31m<stdlib.h>[m      [34m// supports the dynamic allocation of memory for variables and arrays[m
+[35m#include[m[31m"mdou_headers_P1.h"[m     [34m// header file, defines and explicitly declares functions[m
+
+[32mint[m main(){[14;9H[32mchar[m *str2 = ([32mchar[m *)malloc([33msizeof[m(str2));      [34m// creates a scan object that allocates enough memory to store the user-inputted file[m[15;9H[32mFILE[m *fpt;      [34m// creates a file pointer to interact with said file (In this case, we will be performing a read operation)     [m[16;9H[32mint[m chr, word, line; [34m// local variables[m[18;9Hprintf([31m"Enter Filename: "[m);[19;9Hscanf([31m"[m[35m%s[m[31m"[m, str2);      [34m// asks for user input and scans for file name[m[20;9Hfpt = fopen(str2,[31m"r"[m);  [34m// opens file instructed by user input[m[22;9H[33mif[m (fpt == [31mNULL[m){[7C[34m// test if file exists[m[23;17Hprintf([31m"Invalid Filename[m[35m\n[m[31m"[m);   [34m// notifies user that the file does not exist[m[24;17H[33mreturn[m [31m0[m;[7C[34m// breaks and pops function off execution stack[m[25;9H}[27;9Hchr = countCharacters(fpt);[28;9Hfseek(fpt,[31m0[m,[31mSEEK_SET[m);[30;9Hword = countWords(fpt);[31;9Hfseek(fpt,[31m0[m,[31mSEEK_SET[m);[33;9Hline = countLines(fpt);[35;9Hfclose(fpt);    [34m// closes file once program has finished[m[37;9Hfree(str2);     [34m// frees memory allocated for str2[m[39;9H[33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                                                                                            [42;1H~                                                                                                                                                                                            [43;1H~                                                                                                                                                                                            [44;1H~                                                                                                                                                                                            [45;1H~                                                                                                                                                                                            [46;1H~                                                                                                                                                                                            [47;1H~                                                                                                                                                                                            [48;1H~                                                                                                                                                                                            [49;1H~                                                                                                                                                                                            [m[50;172H11,85-89      All[11;89H[?25h[?25l[50;162H^[[11;89H[50;162H  [11;89H[50;162H^[[11;89H[50;162H  [11;89H[?25h[?25l[50;162H:[11;89H[50;1H[K[50;1H:[?2004h[?25hwq[?25l[?2004l"mdou_main_P1.c" 40L, 1332C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_1[mdou@compute project_1]$ [K[mdou@compute project_1]$ ./mdou_Asn3[K4Proj1
+Enter Filename: Asn4.txt
+Total Number of Characters: 1939
+Total Number of Words: 434
+Total Number of Lines: 23
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_1[mdou@compute project_1]$ cd -
+/home/mdou/courses/cs2211/assignments/Assignment_4
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4[mdou@compute Assignment_4]$ cd project_2
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_2[mdou@compute project_2]$ vi[K[Kls
+[0m[01;32mmdou_Asn4Proj2[0m    mdou_functions.o   mdou_main_P2.c  mdou_make_Proj2
+mdou_functions.c  mdou_headers_P2.h  mdou_main_P2.o
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_2[mdou@compute project_2]$ [K[mdou@compute project_2]$ c[Kvi m[Kmdou_main+[K_P2.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;50r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[50;1H"mdou_main_P2.c" 35L, 1576C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m/* CS2211b [m[31m2020[m[34m */
+/* Assignment [m[35m0[m[31m4[m[34m */
+/* Mingpei Dou */
+/* [m[31m251056543[m[34m */
+/* mdou */
+/* [m[31m16[m[34m/Mar/[m[31m20[m[34m */[m
+
+[35m#include[m[31m<stdio.h>[m[15C[34m// allows for program functionalities[m
+[35m#include[m[31m<string.h>[m[14C[34m// allows for implementation of string arrays[m
+[35m#include[m[31m<stdlib.h>[m[14C[34m// allows for dynamic memory allocation[m
+[35m#include[m[31m"mdou_headers_P2.h"[m     [34m// implements struct employed datatype[m
+
+[32mint[m main(){[14;9H[32mstruct[m employed adam,*adamp;    [34m// creates employed type structure adam to hold personal information to test[m[16;9Hadamp = ([32mstruct[m employed *)malloc( [33msizeof[m([32mstruct[m employed));    [34m// allocates memory for struct employed adam[m[18;9Hstrcpy(adam.info.title.first,[31m"Adam"[m);[11C[34m// sets first name of adam to Adam[m[19;9Hstrcpy(adam.info.title.last,[31m"Driver"[m);[10C[34m// sets last name of adam to Driver[m[20;9Hstrcpy(adam.info.address,[31m"1200 Western Road"[m);  [34m// sets address of adam to [m[31m1200[m[34m Western Road[m[21;9Hstrcpy(adam.info.city,[31m"Cloverfield Island"[m);    [34m// sets city of adam to Cloverfield Island[m[22;9Hstrcpy(adam.info.province,[31m"Nunavut"[m);[11C[34m// sets province of adam to Nunavut[m[23;9Hstrcpy(adam.info.postalCode,[31m"T3T1U5"[m);[10C[34m// sets postal code for adam[m[24;9Hstrcpy(adam.info.phone,[31m"4034206969"[m);[11C[34m// sets phone number for adam[m[25;9Hstrcpy(adam.occupation,[31m"Poop Scooper"[m);[9C[34m// sets adam's job[m[26;9Hadam.salary=[31m25117.49[m;[27C[34m// sets adam's monthy salary[m[28;9Hprintf([31m"[m[35m%s\n[m[31m"[m,adam.info.phone); [34m// prints value of phone before print_person() function[m[29;9Hprint_person(adam);[13C[34m// calls print_person() onto the execution stack[m[30;9Hprintf([31m"[m[35m%s\n[m[31m"[m,adam.info.phone); [34m// prints value of phone after print_person() is popped[m[32;9Hfree(adamp);    [34m// frees memory reserved for struct employed adam[m[34;9H[33mreturn[m [31m0[m;
+}
+[1m[34m~                                                                                                                                                                                            [37;1H~                                                                                                                                                                                            [38;1H~                                                                                                                                                                                            [39;1H~                                                                                                                                                                                            [40;1H~                                                                                                                                                                                            [41;1H~                                                                                                                                                                                            [42;1H~                                                                                                                                                                                            [43;1H~                                                                                                                                                                                            [44;1H~                                                                                                                                                                                            [45;1H~                                                                                                                                                                                            [46;1H~                                                                                                                                                                                            [47;1H~                                                                                                                                                                                            [48;1H~                                                                                                                                                                                            [49;1H~                                                                                                                                                                                            [m[50;172H1,10[10CAll[1;10H[?25h[?25l[50;162H:[1;10H[50;1H[K[50;1H:[?2004h[?25hwq[?25l[?2004l"mdou_main_P2.c" 35L, 1576C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_2[mdou@compute project_2]$ [K[mdou@compute project_2]$ ./[K[Kvi mdou_main_P2.cls[Kcd project_2-[K./mdou_Asn4Proj1[K2
+4034206969
+Name: Adam Driver
+Address: 1200 Western Road, Cloverfield Island, Nunavut	T3T1U5
+Phone Number: 5555551234
+Employment: Poop Scooper
+Income: 25117.490000
+4034206969
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_2[mdou@compute project_2]$ ./mdou_Asn4Proj2vi mdou_main_P2.cls[Kcd project_2-[K./mdou_Asn4Proj1vi mdou_main_P1.cls[Kmake -f  mdou_make_Proj1[K2
+gcc -c mdou_main_P2.c
+mdou_main_P2.c: In function ‘main’:
+mdou_main_P2.c:29:2: warning: implicit declaration of function ‘print_person’ [-Wimplicit-function-declaration]
+   29 |  print_person(adam);  // calls print_person() onto the execution stack
+      |  ^~~~~~~~~~~~
+gcc mdou_main_P2.o mdou_functions.o -o mdou_Asn4Proj2
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_2[mdou@compute project_2]$ make -f  mdou_make_Proj2[8P./mdou_Asn4Proj2
+4034206969
+Name: Adam Driver
+Address: 1200 Western Road, Cloverfield Island, Nunavut	T3T1U5
+Phone Number: 5555551234
+Employment: Poop Scooper
+Income: 25117.490000
+4034206969
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_4/project_2[mdou@compute project_2]$ exit
+exit
+
+Script done on 2020-03-16 16:50:03-04:00 [COMMAND_EXIT_CODE="0"]

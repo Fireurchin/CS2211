@@ -1,0 +1,18 @@
+# CS2211b 2020
+# Assignment 04
+# Mingpei Dou
+# 251056543
+# mdou
+# 13/Feb/20
+
+mdou_Asn4Proj2: mdou_main_P2.o mdou_functions.o
+	gcc mdou_main_P2.o mdou_functions.o -o mdou_Asn4Proj2
+
+mdou_main_P2.o: mdou_main_P2.c mdou_headers_P2.h
+	gcc -c mdou_main_P2.c
+
+mdou_functions.o: mdou_functions.c mdou_headers_P2.h
+	gcc -c mdou_functions.c
+
+clean:
+	rm *.o

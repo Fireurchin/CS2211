@@ -1,0 +1,24 @@
+# CS2211b 2020
+# Assignment 04
+# Mingpei Dou
+# 251056543
+# mdou
+# 16/Mar/20
+
+mdou_Asn4Proj1: mdou_main_P1.o mdou_countCharacters.o mdou_countWords.o mdou_countLines.o
+	gcc mdou_main_P1.o mdou_countCharacters.o mdou_countWords.o mdou_countLines.o -o mdou_Asn4Proj1
+
+mdou_main_P1.o: mdou_main_P1.c mdou_headers_P1.h
+	gcc -c mdou_main_P1.c
+
+mdou_countCharacters.o: mdou_countCharacters.c mdou_headers_P1.h
+	gcc -c mdou_countCharacters.c
+
+mdou_countWords.o: mdou_countWords.c mdou_headers_P1.h
+	gcc -c mdou_countWords.c
+
+mdou_countLines.o: mdou_main_P1.c mdou_headers_P1.h
+	gcc -c mdou_countLines.c
+
+clean:
+	rm *.o

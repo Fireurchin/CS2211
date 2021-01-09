@@ -1,0 +1,135 @@
+Script started on 2020-03-31 18:12:00-04:00 [TERM="xterm" TTY="/dev/pts/6" COLUMNS="80" LINES="24"]
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ date
+Tue 31 Mar 2020 06:12:29 PM EDT
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ whoami
+mdou
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ ls
+[0m[01;32mmdou_Asn5[0m          mdou_deleteNode.h  mdou_linkedlist.h  mdou_make_Asn5
+mdou_Asn5.output   mdou_headers.h     mdou_main.c        mdou_sortList.h
+mdou_createList.h  mdou_insertList.h  mdou_main.o
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ make -f msou_[K[K[K[Kdou_asn[K[K[Kmake_Asn5
+make: 'mdou_Asn5' is up to date.
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ vi mdou_main.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"mdou_main.c" 89L, 3919C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m/* CS2211b [m[31m2020[m[34m */
+/* Assignment [m[35m0[m[31m5[m[34m */
+/* Mingpei Dou */
+/* [m[31m251056543[m[34m */
+/* mdou */
+/* [m[31m28[m[34m/Mar/[m[31m2020[m[34m */[m
+
+[35m#include[m[31m<stdio.h>[m[15C[34m// Imports neccesary functions for c program[m
+[35m#include[m[31m<stdlib.h>[m[14C[34m// Implements dynamic memory allocation[m
+[35m#include[m[31m<time.h>[m[16C[34m// Implements random number generation[m
+[35m#include[m[31m<stdbool.h>[m
+[35m#include[m[31m"mdou_headers.h"[m[8C[34m// Implements all header files required to implee[13;1Hment linked list structure [m
+
+[32mint[m main(){[16;9H[32mint[m* data;[22C[34m// initializes data pointer[m[17;9HlinkedList* linList;[12C[34m// initializes list pointer[m[18;9H[32mint[m nodeCount, realCount;[7C[34m// initializes user-specified node countt[19;1Her and real node index[m[20;9HlistNode* currNode;[13C[34m// initializes current node[m[21;9H[32mint[m subNum = [31m211[m;[15C[34m// initializes deletion value with a nonn[22;1H-zero value[m[23;9H[32mbool[m del;[23C[34m// initializes boolean to detect for suc[m[23;1H[1m[34m@@@                                                                             [m[24;63H1,15[10CTop[1;15H[?25h[27m[23m[29m[m[H[2J[?25l[1;1H[34m/* CS2211b [m[31m2020[m[34m */
+/* Assignment [m[35m0[m[31m5[m[34m */
+/* Mingpei Dou */
+/* [m[31m251056543[m[34m */
+/* mdou */
+/* [m[31m28[m[34m/Mar/[m[31m2020[m[34m */[m
+
+[35m#include[m[31m<stdio.h>[m[15C[34m// Imports neccesary functions for c program[m
+[35m#include[m[31m<stdlib.h>[m[14C[34m// Implements dynamic memory allocation[m
+[35m#include[m[31m<time.h>[m[16C[34m// Implements random number generation[m
+[35m#include[m[31m<stdbool.h>[m
+[35m#include[m[31m"mdou_headers.h"[m[8C[34m// Implements all header files required to implement linked list structure [m
+
+[32mint[m main(){[15;9H[32mint[m* data;[22C[34m// initializes data pointer[m[16;9HlinkedList* linList;[12C[34m// initializes list pointer[m[17;9H[32mint[m nodeCount, realCount;[7C[34m// initializes user-specified node counter and real node index[m[18;9HlistNode* currNode;[13C[34m// initializes current node[m[19;9H[32mint[m subNum = [31m211[m;[15C[34m// initializes deletion value with a non-zero value[m[20;9H[32mbool[m del;[23C[34m// initializes boolean to detect for successful deletion operation[m[22;9HlinList = createList(); [34m// creates list object and store address in linList[m[24;9Hprintf([31m"Number of Nodes Required: "[m);   [34m// queries user input[m[25;9Hscanf([31m"[m[35m%d[m[31m"[m,&nodeCount);[17C[34m// number of nodes is defined by the user[m[27;9Hsrand(time([31mNULL[m));      [34m// sets counter for random number generation[m[29;9Hprintf([31m"[m[35m\n[m[31mUnsorted Linked List with [m[35m%d[m[31m nodes:[m[35m\n\n[m[31m"[m,nodeCount);[30;9H[33mfor[m([32mint[m i = [31m0[m; i<nodeCount; i++){[31;17Hdata = ([32mint[m*)malloc([33msizeof[m([32mint[m));[7C[34m// dymanically allocates room for data stored within node object[m[32;17H*data = rand()%[31m100[m+[31m1[m;[19C[34m// stores randomly generated variable within node of linked list[m[33;17HinsertNode(linList, data);[14C[34m// calls insertList function to insert node within list[m[34;9H}[36;9HcurrNode = linList->head;[55C[34m// begins print loop at list head[m[37;9H[33mwhile[m(currNode!=[31mNULL[m){[38;17HrealCount = nodeCount-(currNode->index)+[31m1[m;[30C[34m// sets true value of index to capacity minus node index[m[39;17Hprintf([31m"Node: [m[35m%d[m[31m: Value: [m[35m%d\n[m[31m"[m,realCount,*(([32mint[m*)currNode->data));      [34m// prints the index and datavalue of each node[m[40;17HcurrNode = currNode->next;[46C[34m// cycles through list[m[41;9H}[43;9Hprintf([31m"[m[35m\n[m[31mSorted Linked List with [m[35m%d[m[31m nodes:[m[35m\n\n[m[31m"[m,nodeCount);[44;9HsortList(linList);[62C[34m// performs sort operation on list[m[45;9HcurrNode = linList->head;[55C[34m// begins print loop at list head[m[46;9H[33mwhile[m(currNode!=[31mNULL[m){[58C[34m// repeat until node is rear[m[47;17HrealCount = nodeCount - (currNode->index)+[31m1[m;[28C[34m// sets true value of index to capacity minus node index[m[48;17Hprintf([31m"Node: [m[35m%d[m[31m: Value: [m[35m%d\n[m[31m"[m,realCount,*(([32mint[m*)currNode->data));      [34m// print index and datavalue of each node[m[49;17HcurrNode = currNode->next;[46C[34m// cycles through list[m[50;172H1,15[10CTop[1;15H[?25h[?25l[50;162H^[[1;15H[50;162H  [1;15H[50;162H^[[1;15H[50;162H  [1;15H[?25h[?25l[50;162H:[1;15H[50;162H[K[50;1H:[?2004h[?25hwq[?25l[?2004l"mdou_main.c" 89L, 3919C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ ./ mdou[K[K[K[K[Kmdou_Asn5
+Number of Nodes Required: 7
+
+Unsorted Linked List with 7 nodes:
+
+Node: 1: Value: 85
+Node: 2: Value: 94
+Node: 3: Value: 34
+Node: 4: Value: 73
+Node: 5: Value: 60
+Node: 6: Value: 52
+Node: 7: Value: 73
+
+Sorted Linked List with 7 nodes:
+
+Node: 3: Value: 34
+Node: 6: Value: 52
+Node: 5: Value: 60
+Node: 4: Value: 73
+Node: 7: Value: 73
+Node: 1: Value: 85
+Node: 2: Value: 94
+
+Enter a Value to be Deleted: 34
+
+
+Searching for Node with Value of 34
+Node Found, deletion is imminent
+
+Node: 6: Value: 52
+Node: 5: Value: 60
+Node: 4: Value: 73
+Node: 7: Value: 73
+Node: 1: Value: 85
+Node: 2: Value: 94
+
+Enter a Value to be Deleted: 60
+
+
+Searching for Node with Value of 60
+Node Found, deletion is imminent
+
+Node: 6: Value: 52
+Node: 4: Value: 73
+Node: 7: Value: 73
+Node: 1: Value: 85
+Node: 2: Value: 94
+
+Enter a Value to be Deleted: 94
+
+
+Searching for Node with Value of 94
+Node Found, deletion is imminent
+
+Node: 6: Value: 52
+Node: 4: Value: 73
+Node: 7: Value: 73
+Node: 1: Value: 85
+
+Enter a Value to be Deleted: 8
+
+
+Searching for Node with Value of 8
+No Such Node Exists
+
+Node: 6: Value: 52
+Node: 4: Value: 73
+Node: 7: Value: 73
+Node: 1: Value: 85
+
+Enter a Value to be Deleted: 0
+
+
+Searching for Node with Value of 0
+No Such Node Exists
+
+Node: 6: Value: 52
+Node: 4: Value: 73
+Node: 7: Value: 73
+Node: 1: Value: 85
+
+Enter Number of New Nodes: 3
+
+
+Sorted List After Adding 3 Nodes:
+Node: 9: Value: 52
+Node: 6: Value: 63
+Node: 4: Value: 64
+Node: 7: Value: 73
+Node: 10: Value: 73
+Node: 4: Value: 85
+Node: 5: Value: 92
+]0;mdou@compute:~/courses/cs2211/assignments/Assignment_5[mdou@compute Assignment_5]$ exit
+exit
+
+Script done on 2020-03-31 18:14:33-04:00 [COMMAND_EXIT_CODE="0"]

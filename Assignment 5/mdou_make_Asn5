@@ -1,0 +1,15 @@
+# CS2211b 2020
+# Assignment 05
+# Mingpei Dou
+# 251056543
+# mdou
+# 31/Mar/2020
+
+mdou_Asn5: mdou_main.o
+	gcc mdou_main.o -o mdou_Asn5
+
+mdou_main.o: mdou_main.c mdou_headers.h mdou_createList.h mdou_linkedlist.h mdou_insertList.h mdou_sortList.h mdou_deleteNode.h
+	gcc -c mdou_main.c
+
+clean:
+	rm *.o
